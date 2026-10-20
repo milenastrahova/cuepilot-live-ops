@@ -1,5 +1,7 @@
 # CuePilot — Live Production Control
 
+**[🚀 Live demo](https://cuepilot-live-ops.vercel.app/) · [Source code](https://github.com/milenastrahova/cuepilot-live-ops)**
+
 > **Broadcast-ready run-of-show planning, preflight safety checks and a simulated live control desk.** An interactive operations app built as an AI-assisted software-development portfolio project for live sports production workflows.
 
 **React 19 · TypeScript · Tailwind CSS 4 · Vite · Recharts · Node.js test runner**
@@ -61,7 +63,7 @@ npm run preview
 
 The `tests/` directory includes domain-engine and backup validation tests. There is also `.github/workflows/ci.yml` to run tests and a production build after upload to GitHub.
 
-**Verification status when packaged:** Node-native automated unit tests passed (29/29) and isolated domain TypeScript typechecking passed. The complete Vite production bundle was **not verified in this environment**, because npm dependencies could not be downloaded (network DNS restrictions). Build and visual QA should be completed on a developer machine before presenting the project as fully verified.
+**Verification:** 29/29 automated unit tests and isolated domain TypeScript typechecking passed during packaging. The complete Vite production build was subsequently completed successfully on Vercel, and the application UI and key operator workflows were manually checked in a browser. The project remains a demonstration prototype, not production-grade broadcast software.
 
 ## 4-minute portfolio demonstration
 
@@ -103,12 +105,14 @@ tests/                        Automated Node-native tests
 - JSON import is structurally validated; it is not a replacement for schema versioning, authentication, CSP and backend authorization.
 - This application is a *portfolio prototype*, not a certified broadcast-safe system. It must not be used as a live production control system.
 
-## Deploy
+## Live demo and deployment
 
-1. Create an empty public GitHub repository named `cuepilot-live-ops`.
-2. From the extracted `cuepilot` folder, double-click `PUBLISH_TO_GITHUB.bat` (requires Git installed), or use the `git` commands in `START_HERE_RU.md`.
-3. Import the repository into [Vercel](https://vercel.com/new) with **Framework: Vite**, **Build command: `npm run build`**, **Output: `dist`**.
-4. Once published, share the Vercel domain and GitHub repository in your portfolio. Changes in GitHub can trigger new deployments.
+- **Live application:** https://cuepilot-live-ops.vercel.app/
+- **Source repository:** https://github.com/milenastrahova/cuepilot-live-ops
+
+CuePilot is deployed to **Vercel** from the public GitHub repository's `main` branch. The Vite project builds with `npm run build` to `dist/`. The production deployment completed successfully on Vercel. New commits to `main` can trigger subsequent deployments.
+
+**Reviewer note:** This is a local-first demo, so each browser starts with fictional sample data. Any changes stay in that browser's localStorage. The Live Control Desk simulates controls and does not transmit an actual broadcast.
 
 ## Suggested portfolio description
 
