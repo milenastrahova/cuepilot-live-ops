@@ -1,0 +1,32 @@
+{
+  "name": "cuepilot-live-operations",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Live broadcast production control, rundown automation and resource scheduling portfolio prototype",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "check": "npm test && npm run build"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "recharts": "^2.15.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/node": "^22.15.0",
+    "@vitejs/plugin-react": "^4.4.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.0"
+  },
+  "engines": {"node": ">=22.12.0"}
+}
